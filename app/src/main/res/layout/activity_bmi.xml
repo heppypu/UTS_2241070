@@ -81,18 +81,17 @@
         android:id="@+id/cardHeight"
         android:layout_width="302dp"
         android:layout_height="156dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         app:cardBackgroundColor="#009688"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardWeight">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="274dp"
+            android:layout_height="128dp">
 
             <TextView
                 android:id="@+id/textHeight"
@@ -120,10 +119,10 @@
                 android:textSize="60sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.18"
+                app:layout_constraintHorizontal_bias="0.17"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.813"
+                app:layout_constraintVertical_bias="1.0"
                 tools:ignore="DuplicateClickableBoundsCheck" />
 
             <TextView
@@ -147,7 +146,7 @@
         android:id="@+id/btnCalculate"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#CC8926"
         android:elevation="10sp"
         android:text="Hitung"
@@ -155,7 +154,6 @@
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardHeight" />
 
@@ -163,12 +161,12 @@
         android:id="@+id/cardResult"
         android:layout_width="304dp"
         android:layout_height="149dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="528dp"
         android:backgroundTint="#BFE4E0"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -216,6 +214,14 @@
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="398dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

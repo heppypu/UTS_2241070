@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PBM1</string>
+    <string-array name="jenis">
+        <item>"Pilih Massa Tubuh"</item>
+        <item>"Dewasa"</item>
+        <item>"Anak-Anak"</item>
+    </string-array>
 </resources>
