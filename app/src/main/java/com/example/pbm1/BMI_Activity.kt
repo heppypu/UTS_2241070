@@ -21,6 +21,7 @@ class BMI_Activity : AppCompatActivity() {
     lateinit var edBerat :EditText
     lateinit var edTinggi :EditText
     lateinit var btn :Button
+    lateinit var status : TextView
     lateinit var spinner: Spinner
     val item = listOf("Pilih Massa Tubuh","Dewasa", "Anak - Anak")
     @SuppressLint("MissingInflatedId")
@@ -58,6 +59,7 @@ class BMI_Activity : AppCompatActivity() {
         edBerat = findViewById(R.id.numberWeight)
         edTinggi = findViewById(R.id.numberHeight)
         btn = findViewById(R.id.btnCalculate)
+        status = findViewById(R.id.status)
 
 
 
@@ -78,6 +80,8 @@ class BMI_Activity : AppCompatActivity() {
                     //convert ke float/double
                     val hitungBMI = isiBerat.toFloat()/((isiTinggi.toFloat()/100)*(isiTinggi.toFloat()/100))
                     result.text = hitungBMI.toString()
+                    val pilihan = spinner.selectedItem.toString()
+                    InterBMI(hitungBMI,pilihan)
                 }
             }
 
@@ -99,7 +103,7 @@ class BMI_Activity : AppCompatActivity() {
 
 
     }
-    private fun interpretBMI(bmi: Float, category: String) {
+    private fun InterBMI(bmi: Float, category: String) {
         val result: TextView = findViewById(R.id.result)
 
         when (category) {
@@ -107,16 +111,20 @@ class BMI_Activity : AppCompatActivity() {
                 result.text = bmi.toString()
                 when {
                     bmi < 18.5 -> {
-                        Toast.makeText(this, "Underweight", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Underweight", Toast.LENGTH_LONG)
+                        status.text = "Underweight"
                     }
                     bmi in 18.5..25.0 -> {
-                        Toast.makeText(this, "Normal", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Normal", Toast.LENGTH_LONG)
+                        status.text = "Normal"
                     }
                     bmi in 25.0..30.0 -> {
-                        Toast.makeText(this, "Overweight", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Overweight", Toast.LENGTH_LONG)
+                        status.text = "Overweight"
                     }
                     else -> {
-                        Toast.makeText(this, "Obese", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Obese", Toast.LENGTH_LONG)
+                        status.text = "obese"
                     }
                 }
             }
@@ -124,17 +132,22 @@ class BMI_Activity : AppCompatActivity() {
                 result.text = bmi.toString()
                 when {
                     bmi < 5 -> {
-                        Toast.makeText(this, "Underweight", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Underweight", Toast.LENGTH_LONG)
+                        status.text = "Underweight"
                     }
                     bmi in 5.0..85.0 -> {
-                        Toast.makeText(this, "Normal", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Normal", Toast.LENGTH_LONG)
+                        status.text = "Normal"
                     }
                     bmi in 85.0..95.0-> {
-                        Toast.makeText(this, "Overweight", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Overweight", Toast.LENGTH_LONG)
+                        status.text = "Overweight"
                     }
                     bmi > 95 -> {
-                        Toast.makeText(this, "Obese", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Obese", Toast.LENGTH_LONG)
+                        status.text = "Obese"
                     }
+
                 }
             }
         }
