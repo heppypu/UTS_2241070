@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BelajarIntentUts</string>
+    <string-array name="spinnerMenuArray">
+        <item>Pilih Menu</item>
+        <item>Teh Hijau</item>
+        <item>Teh Merah</item>
+        <item>Teh Kuning</item>
+        <item>Kopi susu</item>
+        <item>Kopi Hitam</item>
+    </string-array>
+</resources>
